@@ -1,6 +1,6 @@
 function getDrinkByProfession(input){
     let output;
-    switch(input.toLowerCase){
+    switch(input.toLowerCase()){
          case "Jabroni" : 
              output= "Patron Tequila";
             break;
