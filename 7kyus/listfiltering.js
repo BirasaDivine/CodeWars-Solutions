@@ -10,3 +10,13 @@ function filter_list(l) {
    // Return a new array with the strings filtered out
  }
  console.log( filter_list([1,2,'a','b']))
+ //Another Way
+ function filter_list(l) {
+    for(let i = l.length - 1; i >= 0; i--){
+        if(typeof l[i] !== 'number'){
+            l.splice(i,1);
+        }
+    }
+   return l
+ // Return a new array with the strings filtered out
+}
