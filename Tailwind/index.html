@@ -5,11 +5,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="./build/output.css" rel="stylesheet">
+    <link href="./tailwind.css" rel="stylesheet">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
-<body>
-    <h1 class="text-4xl font-bold text-center text-blue-500"> Hello World</h1>
+<body class="bg-white">
+    <div class="my-8 max-w-6xl mx-auto">
+        <div class="flex justify-between gap-16">
+            <img class="" src="/images/Logo.png" alt="Logo">
+            <div class="flex gap-4 text-gray-500">
+                <a href="#">About</a>
+                <a href="#">Feautures</a>
+                <a href="#">Pricing</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="flex gap-8">
+                <a href="#">Sign in</a>
+                <a class="border text-red-400 font-bold border-red-400 rounded-full px-6" href="#">Sign up</a>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-6 mt-20">
+            <div class="flex flex-col gap-10 items-start">
+                <p class="text-6xl font-medium">Want anything to be easy with <span class="font-bold">LaslesVPN</span>
+                </p>
+                <p class="text-gray-500">Provide a network for all your needs with ease and fun using LaslesVPN discover
+                    interesting features
+                    from us.</p>
+                <button class="text-white border bg-red-600 rounded-xl px-12 py-3 " type="button">Get Started</button>
+            </div>
+
+            <img class="" src="./images/Illustration 1.png" alt="First Illustration">
+        </div>
+        <div class="flex flex-row justify-between shadow-xl gap-40 mt-24 px-10 py-10 rounded-xl">
+            <div class="flex flex-1 flex-row gap-3">
+                <img src="./images/user.png" alt="userlogo">
+                <div>
+                    <p>90+</p>
+                    <p>Users</p>
+                </div>
+            </div>
+            <div class="h-auto border-e-2 bg-slate-500"> </div>
+            <div class="flex flex-1 flex-row gap-3">
+                <img src="./images/location.png" alt="userlogo">
+                <div>
+                    <p>50+</p>
+                    <p>Location</p>
+                </div>
+            </div>
+            <div class="h-auto border-e-2 bg-slate-500"> </div>
+            <div class="flex flex-1 flex-row gap-3">
+                <img src="./images/Server.png" alt="userlogo">
+                <div>
+                    <p>30+</p>
+                    <p>Servers</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="grid grid-cols-2 gap-6 mt-20">
+            <img class="" src="./images/Illustration 2.png" alt="Second Illustration">
+
+            <div class="flex flex-col gap-10 items-start">
+                <p class="text-5xl font-medium">We Provide Many Feautures You Can Use</p>
+                <p class="text-gray-500">You can explore the features that we provide with fun and have their own
+                    functions each feature.</p>
+                <div class="flex flex-row gap-2">
+                    <img src="./images/Group 1120.png" alt="correct">
+                    <p>Powerful Online Protection</p>
+                </div>
+                <div class="flex flex-row gap-2">
+                    <img src="./images/Group 1120.png" alt="correct">
+                    <p>Internet without borders</p>
+                </div>
+                <div class="flex flex-row gap-2">
+                    <img src="./images/Group 1120.png" alt="correct">
+                    <p>Supercharged VPN</p>
+                </div>
+                <div class="flex flex-row gap-2">
+                    <img src="./images/Group 1120.png" alt="correct">
+                    <p>No specific time limits</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class=" flex flex-col gap-10 mt-24 items-center">
+            <p class="text-5xl font-medium">Choose Your Plan</p>
+            <p class="text-gray-500">Let's choose the package that is best for you and explore it happily and
+                cheerfully.</p>
+            <div class="grid grid-cols-3 gap-6 mt-20">
+                <div class="border-2 p-2">
+                    <img src="./images/Free.png" alt="free">
+                    <p>Free</p>
+                    <div class="flex flex-row gap-2 mt-6">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Powerful online protection</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Encrypted connection</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>No traffic logs</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Works on all devices</p>
+                    </div>
+
+                    <div class="flex flex-col items-center mt-32">
+                        <p>Free</p>
+                        <button class="text-red-600 font-bold border-2 rounded-xl p-2 border-red-600 mt-4 mb-8"
+                            type="button">Select</button>
+                    </div>
+
+                </div>
+                <div class="border-2">
+                    <img src="./images/Free.png" alt="free">
+                    <p>Free</p>
+                    <div class="flex flex-row gap-2 mt-6">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Powerful online protection</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Encrypted connection</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>No traffic logs</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Works on all devices</p>
+                    </div>
+
+                    <div class="flex flex-col items-center mt-32">
+                        <p>Free</p>
+                        <button class="text-red-600 font-bold border-2 rounded-xl p-2 border-red-600 mt-4 mb-8"
+                            type="button">Select</button>
+                    </div>
+
+                </div>
+                <div class="border-2">
+                    <img src="./images/Free.png" alt="free">
+                    <p>Free</p>
+                    <div class="flex flex-row gap-2 mt-6">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Powerful online protection</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Encrypted connection</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>No traffic logs</p>
+                    </div>
+                    <div class="flex flex-row gap-2 mt-3">
+                        <img src="./images/Group 1120.png" alt="correct">
+                        <p>Works on all devices</p>
+                    </div>
+
+                    <div class="flex flex-col items-center mt-32">
+                        <p class="font-bold">Free</p>
+                        <button class="text-white font-bold border-2 rounded-xl p-2 border-red-600 bg-red-600 mt-4 mb-8"
+                            type="button">Select</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
