@@ -46,26 +46,30 @@
 //     console.log("Done fetching the user")
 // })
 
-let validateUser = function(userId,password){
-    return new Promise(function(resolve,reject){
-        if(userId && password){
-            resolve("Authenticated")
-        }else{
-            reject({message:"userId and password not authenticated"})
-        }
-    })
-}
-  const app= async (function (){
-        const data = {
-            userId : "",
-            password : "",
-        }
-      try{
-        const result= await validateUser(data)
-         console.log(result)
-      } catch(e){
-        console.log(e.message)
-      }
+// let validateUser = function(userId,password){
+//     return new Promise(function(resolve,reject){
+//         if(userId && password){
+//             resolve("Authenticated")
+//         }else{
+//             reject({message:"userId and password not authenticated"})
+//         }
+//     })
+// }
+//   const app= async (function (){
+//         const data = {
+//             userId : "",
+//             password : "",
+//         }
+//       try{
+//         const result= await validateUser(data)
+//          console.log(result)
+//       } catch(e){
+//         console.log(e.message)
+//       }
         
-  })
-  app();
+//   })
+//   app();
+
+
+
+
