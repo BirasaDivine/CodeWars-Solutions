@@ -79,3 +79,22 @@
 // Example array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // Expected output with: [2, 4, 6, 8, 10]
 // Expected output with numbers greater than 5: [6, 7, 8, 9, 10]
+
+// 5. Create a function that applies multiple transformations to a string using callbacks.
+function transformString(text, callback1, callback2) {
+    let firstResult= callback1(text);
+    return callback2(firstResult)
+}
+  function reversedText(text){
+    let newText=text.split("").reverse().join("");
+    return newText
+    
+  }
+  function uppercase(text){
+    return text.toUpperCase();
+  }
+  console.log(transformString("hello world", reversedText,uppercase))
+
+// Input: "hello world"
+// Expected output with uppercase and reverse callbacks:
+// "DLROW OLLEH"
