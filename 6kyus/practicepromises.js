@@ -39,3 +39,13 @@
 // counter()();
 
 
+function counter(callback) {
+    let i=1;
+    function count(){
+        if(i<=5){
+            console.log(i);
+            i++;
+            setTimeout(count,i)
+        }
+    }
+}
