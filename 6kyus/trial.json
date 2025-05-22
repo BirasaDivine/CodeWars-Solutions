@@ -1,0 +1,33 @@
+// api1: "https://restcountries.com/v3.1/name/{countryName}"
+// api2: "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true"
+// latitude: {Root}.latlng[0]
+// lweather.temperature
+// temperature unit: {Root}.current_weather_units.temperatureongitude: {Root}.latlng[1]
+// name: {Root}.name.common
+// capital: {Root}.capital[0]
+// temperature: {Root}.current_
+
+async function getCountries(countryName) {
+    const details = {};
+    const countryResponse = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+    if(!countryResponse.ok){} // TODO: finish errow handling
+    const countryData = (await countryResponse.json())[0];
+    const [lat, lon] = countryData.latlng;
+    const weatherResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
+    const weatherData = await weatherResponse.json();
+    return {
+        name: countryData.name.common,
+        capital: countryData.capital[0],
+        temperature: weatherData.current_weather.temperature,
+        weather_unit: weatherData.current_weather_units.temperature
+    }
+}
+
+getCountries('rwanda').then((country) => {
+    // console.log(country);
+    console.log(`
+        Country: ${country.name}
+        Capital: ${country.capital}
+        Current Temperature: ${country.temperature}${country.weather_unit}
+    `);
+}).catch(() => console.error('There was an issue'))
