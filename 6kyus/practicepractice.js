@@ -89,33 +89,33 @@
 //         console.log(data)
 //     })
 
-// Write a function that takes an array of URLs, fetches data from each URL concurrently 
-// using Promise.all(), and returns the combined results.
+Write a function that takes an array of URLs, fetches data from each URL concurrently 
+using Promise.all(), and returns the combined results.
   
 
-    // function fetchData(){
-    //     const urls = [
-    //         'https://jsonplaceholder.typicode.com/todos/1',
-    //         'https://api.thecatapi.com/v1/images/search',
-    //         'https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY' 
-    //     ];
-    //     return Promise.all( urls.map(url => 
-    //         fetch(url)
-    //         .then(function(response){
-    //         if(!response.ok){
-    //             throw new Error(`HTTP ERROR: ${response.status}`)
-    //         }else{
-    //             return response.json()
-    //         }
-    //     })
-    //     .catch(function(error){
-    //         return error
-    //     })) )
+    function fetchData(){
+        const urls = [
+            'https://jsonplaceholder.typicode.com/todos/1',
+            'https://api.thecatapi.com/v1/images/search',
+            'https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY' 
+        ];
+        return Promise.all( urls.map(url => 
+            fetch(url)
+            .then(function(response){
+            if(!response.ok){
+                throw new Error(`HTTP ERROR: ${response.status}`)
+            }else{
+                return response.json()
+            }
+        })
+        .catch(function(error){
+            return error
+        })) )
         
-    // }
-    // fetchData().then(function(data){
-    //     console.log(data)
-    // })
+    }
+    fetchData().then(function(data){
+        console.log(data)
+    })
 
 
     // Create a function that returns a Promise which rejects
