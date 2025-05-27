@@ -5,8 +5,8 @@
 function capMe(names) {
     const res = [];
 names.map(word => {
-//    console.log(word[0].toUpperCase() + [word].splice(1,)) 
-   res.push(word[0].toUpperCase() + word.slice(1).toLowerCase())
+    console.log(word.splice(1,))
+   //res.push(word[0].toUpperCase() + word.slice(1).toLowerCase())
 });
 
 
