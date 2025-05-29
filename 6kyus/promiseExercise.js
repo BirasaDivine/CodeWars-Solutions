@@ -19,20 +19,53 @@
 //   });
 
 // 2.Create a JavaScript program that converts a callback-based function into a Promise-based function.
-function callbackPromise(callback){
-    return new Promise(function(resolve,reject){
-        callback(function(result,error){
-            if(result){
-                resolve("Done")
-            }else{
-                reject(error)
-            }
-        })
+// function callbackPromise(callback){
+//     return new Promise(function(resolve,reject){
+//         callback(function(result,error){
+//             if(result){
+//                 resolve("Done")
+//             }else{
+//                 reject(error)
+//             }
+//         })
+//     })
+// }
+// callbackPromise(fetchdata).then(function(data){
+//     console.log(data)
+// })
+// .catch(function(data){
+//     console.log(data)
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function antiOptimize(task){
+    const resultPromise=task()
+    const delay=new Promise(resolve =>{
+        setTimeout(function(){
+            resolve("Hello World")
+        },11000)
     })
+    await delay
+    return resultPromise
 }
-callbackPromise(fetchdata).then(function(data){
-    console.log(data)
-})
-.catch(function(data){
-    console.log(data)
+
+const task = () => {
+    return "task completed"
+}
+
+
+antiOptimize(task)
+.then(result =>{
+    console.log(result)
 })
