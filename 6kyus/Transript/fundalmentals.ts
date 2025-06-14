@@ -18,10 +18,16 @@
 
 
 
-const you : object ={
-    userName : "Bobby",
-    isReturning : "true",
-}
-console.log(you.userName)   
+// const you : object ={
+//     userName : "Bobby",
+//     isReturning : "true",
+// }
+// console.log(you.userName)   
 
-let  age=35;
+// let  age=35;
+
+
+function addNumber(a,b){
+    return a+b
+}
+console.log(addNumber("5","6"))
