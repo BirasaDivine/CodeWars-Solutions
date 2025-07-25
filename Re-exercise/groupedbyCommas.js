@@ -2,17 +2,15 @@
 // representation of the number grouped by commas after every 3 digits.
 // 35235235  ->  "35,235,235"
 function num(n) {
-  let  stringify=n.toString().split("")
-  let newArray=[]
-  for(let i=stringify.length-1;i>=0;i--){
-    newArray.push(stringify[i])
-    if( i%3 === 0 && i !== 0){
-
-      newArray.splice(i,0,",")
-      console.log(newArray)
-      
+  let  stringify=n.toString().split("").reverse()
+  //console.log(stringify)
+  let newArray= stringify.map((num,i) =>{
+  if((i+1) % 3=== 0 && i !==0){
+      return ","+num
+    } else {
+    return num
     }
-  }
- // return stringify
+  })
+  return newArray.reverse().join("")
 }
 console.log((num(35235235)))
